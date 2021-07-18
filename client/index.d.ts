@@ -824,7 +824,6 @@ declare module "alt-client" {
      * @beta
      */
     render: () => void;
-    [name: string]: (...args: any[]) => void;
   }
 
   export interface IDiscordOAuth2Token {
