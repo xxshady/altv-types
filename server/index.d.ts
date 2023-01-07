@@ -1872,8 +1872,8 @@ declare module "alt-server" {
     public isWindowOpened(windowId: number): boolean;
     /**
      * Repairs the vehicle.
-     * 
-     * @remarks At present this function is **unstable**, 
+     *
+     * @remarks At present this function is **unstable**,
      * consider recreating the vehicle or using {@link https://natives.altv.mp/#/0x115722B1B9C14C1C setVehicleFixed} instead.
      * * https://github.com/altmp/altv-issues/issues/1748
      * * https://github.com/altmp/altv-issues/issues/1184
