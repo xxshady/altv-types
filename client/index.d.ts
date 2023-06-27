@@ -83,9 +83,9 @@ declare module "alt-client" {
     /** @alpha */
     ForceRenderSnow = "FORCE_RENDER_SNOW",
     /** @alpha */
-    ForceHideNightProps  = "FORCE_HIDE_NIGHT_PROPS",
+    ForceHideNightProps = "FORCE_HIDE_NIGHT_PROPS",
     /** @alpha */
-    ForceShowNightProps  = "FORCE_SHOW_NIGHT_PROPS",
+    ForceShowNightProps = "FORCE_SHOW_NIGHT_PROPS",
     /** @alpha */
     DisableEmissiveLightsRendering = "DISABLE_EMISSIVE_LIGHTS_RENDERING",
   }
@@ -443,72 +443,72 @@ declare module "alt-client" {
   }
 
   /**
-   * Extend it by interface merging for use in baseobject meta {@link "alt-client".BaseObject getMeta method}, {@link "alt-client".BaseObject setMeta method}, etc.
+   * Extend it by interface merging for use in baseobject meta {@link BaseObject#getMeta}, {@link BaseObject#setMeta}, etc.
    *
-   * @remarks See {@link "alt-shared".ICustomGlobalMeta} for an example of use.
+   * @remarks See {@link shared.ICustomGlobalMeta} for an example of use.
    */
   export interface ICustomBaseObjectMeta extends shared.ICustomBaseObjectMeta {}
 
   /**
-   * Extend it by interface merging for use in blip meta {@link "alt-client".Blip getMeta method}, {@link "alt-client".Blip setMeta method}, etc.
+   * Extend it by interface merging for use in blip meta {@link Blip#getMeta}, {@link Blip#setMeta}, etc.
    *
-   * @remarks See {@link "alt-shared".ICustomGlobalMeta} for an example of use.
+   * @remarks See {@link shared.ICustomGlobalMeta} for an example of use.
    */
   export interface ICustomBlipMeta extends ICustomBaseObjectMeta {}
 
   /**
-   * Extend it by merging interfaces for use in checkpoint meta {@link "alt-client".Checkpoint getMeta method}, {@link "alt-client".Checkpoint setMeta method}, etc.
+   * Extend it by merging interfaces for use in checkpoint meta {@link !Checkpoint#getMeta}, {@link !Checkpoint#setMeta}, etc.
    *
-   * @remarks See {@link "alt-shared".ICustomGlobalMeta} for an example of use.
+   * @remarks See {@link shared.ICustomGlobalMeta} for an example of use.
    */
   export interface ICustomCheckpointMeta extends ICustomBaseObjectMeta {}
 
   /**
-   * Extend it by interface merging for use in colshape meta {@link "alt-server".Colshape getMeta method}, {@link "alt-server".Colshape setMeta method}, etc.
+   * Extend it by interface merging for use in colshape meta {@link "alt-server".Colshape getMeta}, {@link "alt-server".Colshape setMeta}, etc.
    *
-   * @remarks See {@link "alt-shared".ICustomGlobalMeta} for an example of use.
+   * @remarks See {@link shared.ICustomGlobalMeta} for an example of use.
    */
   export interface ICustomColshapeMeta extends ICustomBaseObjectMeta {}
 
   /**
-   * Extend it by merging interfaces for use in webview meta {@link "alt-client".WebView getMeta method}, {@link "alt-client".WebView setMeta method}, etc.
+   * Extend it by merging interfaces for use in webview meta {@link WebView#getMeta}, {@link WebView#setMeta}, etc.
    *
-   * @remarks See {@link "alt-shared".ICustomGlobalMeta} for an example of use.
+   * @remarks See {@link shared.ICustomGlobalMeta} for an example of use.
    */
   export interface ICustomWebViewMeta extends ICustomBaseObjectMeta {}
 
   /**
-   * Extend it by merging interfaces for use in audio meta {@link "alt-client".Audio getMeta method}, {@link "alt-client".Audio setMeta method}, etc.
+   * Extend it by merging interfaces for use in audio meta {@link Audio#getMeta}, {@link Audio#setMeta}, etc.
    *
-   * @remarks See {@link "alt-shared".ICustomGlobalMeta} for an example of use.
+   * @remarks See {@link shared.ICustomGlobalMeta} for an example of use.
    */
   export interface ICustomAudioMeta extends ICustomBaseObjectMeta {}
 
   /**
-   * Extend it by interface merging for use in entity meta {@link "alt-client".Entity getMeta method}, {@link "alt-client".Entity setMeta method}, etc.
+   * Extend it by interface merging for use in entity meta {@link Entity#getMeta}, {@link Entity#setMeta}, etc.
    *
-   * @remarks See {@link "alt-shared".ICustomGlobalMeta} for an example of use.
+   * @remarks See {@link shared.ICustomGlobalMeta} for an example of use.
    */
   export interface ICustomEntityMeta extends ICustomBaseObjectMeta {}
 
   /**
-   * Extend it by merging interfaces for use in player meta {@link "alt-client".Player getMeta method}, {@link "alt-client".Player setMeta method}, etc.
+   * Extend it by merging interfaces for use in player meta {@link Player#getMeta}, {@link Player#setMeta}, etc.
    *
-   * @remarks See {@link "alt-shared".ICustomGlobalMeta} for an example of use.
+   * @remarks See {@link shared.ICustomGlobalMeta} for an example of use.
    */
   export interface ICustomPlayerMeta extends ICustomEntityMeta {}
 
   /**
-   * Extend it by merging interfaces for use in local player meta {@link "alt-client".LocalPlayer getMeta method}, {@link "alt-client".LocalPlayer setMeta method}, etc.
+   * Extend it by merging interfaces for use in local player meta {@link LocalPlayer#getMeta}, {@link LocalPlayer#setMeta}, etc.
    *
-   * @remarks See {@link "alt-shared".ICustomGlobalMeta} for an example of use.
+   * @remarks See {@link shared.ICustomGlobalMeta} for an example of use.
    */
   export interface ICustomLocalPlayerMeta extends ICustomPlayerMeta {}
 
   /**
-   * Extend it by merging interfaces for use in vehicle meta {@link "alt-client".Vehicle getMeta method}, {@link "alt-client".Vehicle setMeta method}, etc.
+   * Extend it by merging interfaces for use in vehicle meta {@link Vehicle#getMeta}, {@link Vehicle#setMeta}, etc.
    *
-   * @remarks See {@link "alt-shared".ICustomGlobalMeta} for an example of use.
+   * @remarks See {@link shared.ICustomGlobalMeta} for an example of use.
    */
   export interface ICustomVehicleMeta extends ICustomEntityMeta {}
 
@@ -606,7 +606,7 @@ declare module "alt-client" {
      */
     public getStreamSyncedMeta<K extends string>(key: Exclude<K, keyof shared.ICustomVirtualEntityStreamSyncedMeta>): unknown;
     public getStreamSyncedMeta<K extends shared.ExtractStringKeys<shared.ICustomVirtualEntityStreamSyncedMeta>>(key: K): shared.ICustomVirtualEntityStreamSyncedMeta[K] | undefined;
-    /** @deprecated See {@link "alt-shared".ICustomVirtualEntityStreamSyncedMeta} */
+    /** @deprecated See {@link shared.ICustomVirtualEntityStreamSyncedMeta} */
     public getStreamSyncedMeta<V extends any>(key: string): V | undefined;
 
     /**
@@ -878,7 +878,7 @@ declare module "alt-client" {
      */
     public getSyncedMeta<K extends string>(key: Exclude<K, keyof shared.ICustomEntitySyncedMeta>): unknown;
     public getSyncedMeta<K extends shared.ExtractStringKeys<shared.ICustomEntitySyncedMeta>>(key: K): shared.ICustomEntitySyncedMeta[K] | undefined;
-    /** @deprecated See {@link "alt-shared".ICustomEntitySyncedMeta} */
+    /** @deprecated See {@link shared.ICustomEntitySyncedMeta} */
     public getSyncedMeta<V extends any>(key: string): V | undefined;
 
     /**
@@ -900,7 +900,7 @@ declare module "alt-client" {
      */
     public getStreamSyncedMeta<K extends string>(key: Exclude<K, keyof shared.ICustomEntityStreamSyncedMeta>): unknown;
     public getStreamSyncedMeta<K extends shared.ExtractStringKeys<shared.ICustomEntityStreamSyncedMeta>>(key: K): shared.ICustomEntityStreamSyncedMeta[K] | undefined;
-    /** @deprecated See {@link "alt-shared".ICustomEntityStreamSyncedMeta} */
+    /** @deprecated See {@link shared.ICustomEntityStreamSyncedMeta} */
     public getStreamSyncedMeta<V extends any>(key: string): V | undefined;
 
     /**
@@ -1173,7 +1173,7 @@ declare module "alt-client" {
 
     public getSyncedMeta<K extends string>(key: Exclude<K, keyof shared.ICustomPlayerSyncedMeta>): unknown;
     public getSyncedMeta<K extends shared.ExtractStringKeys<shared.ICustomPlayerSyncedMeta>>(key: K): shared.ICustomPlayerSyncedMeta[K] | undefined;
-    /** @deprecated See {@link "alt-shared".ICustomPlayerSyncedMeta} */
+    /** @deprecated See {@link shared.ICustomPlayerSyncedMeta} */
     public getSyncedMeta<V extends any>(key: string): V | undefined;
 
     public hasSyncedMeta(key: string): boolean;
@@ -1183,7 +1183,7 @@ declare module "alt-client" {
 
     public getStreamSyncedMeta<K extends string>(key: Exclude<K, keyof shared.ICustomPlayerStreamSyncedMeta>): unknown;
     public getStreamSyncedMeta<K extends shared.ExtractStringKeys<shared.ICustomPlayerStreamSyncedMeta>>(key: K): shared.ICustomPlayerStreamSyncedMeta[K] | undefined;
-    /** @deprecated See {@link "alt-shared".ICustomPlayerStreamSyncedMeta} */
+    /** @deprecated See {@link shared.ICustomPlayerStreamSyncedMeta} */
     public getStreamSyncedMeta<V extends any>(key: string): V | undefined;
 
     public hasStreamSyncedMeta(key: string): boolean;
@@ -1783,7 +1783,7 @@ declare module "alt-client" {
 
     public getSyncedMeta<K extends string>(key: Exclude<K, keyof shared.ICustomVehicleSyncedMeta>): unknown;
     public getSyncedMeta<K extends shared.ExtractStringKeys<shared.ICustomVehicleSyncedMeta>>(key: K): shared.ICustomVehicleSyncedMeta[K] | undefined;
-    /** @deprecated See {@link "alt-shared".ICustomVehicleSyncedMeta} */
+    /** @deprecated See {@link shared.ICustomVehicleSyncedMeta} */
     public getSyncedMeta<V extends any>(key: string): V | undefined;
 
     public hasSyncedMeta(key: string): boolean;
@@ -1793,7 +1793,7 @@ declare module "alt-client" {
 
     public getStreamSyncedMeta<K extends string>(key: Exclude<K, keyof shared.ICustomVehicleStreamSyncedMeta>): unknown;
     public getStreamSyncedMeta<K extends shared.ExtractStringKeys<shared.ICustomVehicleStreamSyncedMeta>>(key: K): shared.ICustomVehicleStreamSyncedMeta[K] | undefined;
-    /** @deprecated See {@link "alt-shared".ICustomVehicleStreamSyncedMeta} */
+    /** @deprecated See {@link shared.ICustomVehicleStreamSyncedMeta} */
     public getStreamSyncedMeta<V extends any>(key: string): V | undefined;
 
     public hasStreamSyncedMeta(key: string): boolean;
@@ -1842,7 +1842,7 @@ declare module "alt-client" {
     public static readonly all: ReadonlyArray<WebView>;
 
     /** @alpha */
-    public static readonly count: number;
+    public readonly count: number;
 
     /** @alpha */
     public static readonly gpuAccelerationActive: boolean;
@@ -2692,7 +2692,7 @@ declare module "alt-client" {
    * Loads a model into memory synchronously.
    *
    * @remarks Use this method only if you *really* need it, because this method is unsafe and can lead to game crashes.
-   * For normal model loading it is recommended to use {@link "alt-client".Utils.requestModel alt.Utils.requestModel} instead.
+   * For normal model loading it is recommended to use {@link Utils.requestModel alt.Utils.requestModel} instead.
    *
    * @param modelHash Hash of the model.
    */
@@ -2702,10 +2702,10 @@ declare module "alt-client" {
    * Loads a model into memory asynchronously.
    *
    * @remarks Use this method only if you *really* need it, because this method is unsafe and can lead to game crashes.
-   * For normal model loading it is recommended to use {@link "alt-client".Utils.requestModel alt.Utils.requestModel} instead.
+   * For normal model loading it is recommended to use {@link Utils.requestModel alt.Utils.requestModel} instead.
    *
    * @remarks If you want to know when a model is loaded use {@link https://natives.altv.mp/#/0x98A4EB5D89A0C952 hasModelLoaded}
-   * in pair with {@link "alt-client".Utils.waitFor alt.Utils.waitFor}.
+   * in pair with {@link Utils.waitFor alt.Utils.waitFor}.
    *
    * @param modelHash Hash of the model.
    */
@@ -3578,7 +3578,7 @@ declare module "alt-client" {
      * `pos` - From which position to look for the nearest virtualEntity. Defaults to local player position.
      *
      * `range` - In which range to search for the nearest virtualEntity. Defaults to `Infinity`.
-     * 
+     *
      * @alpha
      */
     export function getClosestVirtualEntity(options?: { pos?: shared.IVector3; range?: number }): VirtualEntity | null;
@@ -3648,7 +3648,7 @@ declare module "alt-client" {
    */
   export function getLocalMeta<K extends string>(key: Exclude<K, keyof shared.ICustomPlayerLocalMeta>): unknown;
   export function getLocalMeta<K extends shared.ExtractStringKeys<shared.ICustomPlayerLocalMeta>>(key: K): shared.ICustomPlayerLocalMeta[K] | undefined;
-  /** @deprecated See {@link "alt-shared".ICustomPlayerLocalMeta} */
+  /** @deprecated See {@link shared.ICustomPlayerLocalMeta} */
   export function getLocalMeta<V extends any>(key: string): V | undefined;
 
   export function hasLocalMeta(key: string): boolean;

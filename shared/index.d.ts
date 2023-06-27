@@ -1612,14 +1612,14 @@ declare module "alt-shared" {
   /**
    * Extend it by interface merging for use in baseobject meta {@link BaseObject#getMeta}, {@link BaseObject#setMeta}, etc.
    *
-   * @remarks See {@link "alt-shared".ICustomGlobalMeta} for an example of use.
+   * @remarks See {@link shared.ICustomGlobalMeta} for an example of use.
    */
   export interface ICustomBaseObjectMeta {}
 
   /**
    * Extend it by interface merging for use in baseobject synced meta {@link BaseObject#getSyncedMeta}, {@link BaseObject#hasSyncedMeta}, etc.
    *
-   * @remarks See {@link "alt-shared".ICustomGlobalMeta} for an example of use.
+   * @remarks See {@link shared.ICustomGlobalMeta} for an example of use.
    */
   export interface ICustomBaseObjectSyncedMeta {}
 
@@ -2332,7 +2332,7 @@ declare module "alt-shared" {
      */
     public getSyncedMeta<K extends string>(key: Exclude<K, keyof ICustomBaseObjectSyncedMeta>): unknown;
     public getSyncedMeta<K extends ExtractStringKeys<ICustomBaseObjectSyncedMeta>>(key: K): ICustomBaseObjectSyncedMeta[K] | undefined;
-    /** @deprecated See {@link "alt-shared".ICustomBaseObjectSyncedMeta} */
+    /** @deprecated See {@link shared.ICustomBaseObjectSyncedMeta} */
     public getSyncedMeta<V extends any>(key: string): V | undefined;
 
     /**
@@ -2536,28 +2536,28 @@ declare module "alt-shared" {
   /**
    * Logs the specified arguments to the console.
    *
-   * @remarks Uses {@link "alt-shared".Utils.inspect alt.Utils.inspect} to format values.
+   * @remarks Uses {@link shared.Utils.inspect alt.Utils.inspect} to format values.
    */
   export function log(...args: any[]): void;
 
   /**
    * Logs the specified arguments as an error to the console.
    *
-   * @remarks Uses {@link "alt-shared".Utils.inspect alt.Utils.inspect} to format values.
+   * @remarks Uses {@link shared.Utils.inspect alt.Utils.inspect} to format values.
    */
   export function logError(...args: any[]): void;
 
   /**
    * Logs the specified arguments as a warning to the console.
    *
-   * @remarks Uses {@link "alt-shared".Utils.inspect alt.Utils.inspect} to format values.
+   * @remarks Uses {@link shared.Utils.inspect alt.Utils.inspect} to format values.
    */
   export function logWarning(...args: any[]): void;
 
   /**
    * Logs the specified arguments to the console if debug is enabled.
    *
-   * @remarks Uses {@link "alt-shared".Utils.inspect alt.Utils.inspect} to format values.
+   * @remarks Uses {@link shared.Utils.inspect alt.Utils.inspect} to format values.
    */
   export function logDebug(...args: any[]): void;
 
